@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>
+ {{ title }}!
+</h1>
+<router-outlet></router-outlet>
+<hr>
+<app-simple-form *ngFor = 'let item of messageService.messages' [message]='item.text' (update)='myUpdate($event,item)'></app-simple-form>
+
+<hr>
+<hr>
+{{messageService.message}}
+{{api}}
+
+<hr>
+<ul>
+    <li *ngFor = 'let item of messageService.messages'>{{item.text}}</li>
+</ul>
+

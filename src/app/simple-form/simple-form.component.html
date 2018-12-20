@@ -1,0 +1,4 @@
+<div>
+  <input type="text" #myinput [(ngModel)]='message'>
+  <button (click)="update.emit({text:myinput.value})">click</button>
+</div>
